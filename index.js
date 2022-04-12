@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
 const connectDB = async () => {
     try {
         
-        await mongoose.connect(`mongodb+srv://tuananhday:1234@cluster0.6jvdn.mongodb.net/shop?retryWrites=true&w=majority`,{
+        await mongoose.connect(`mongodb+srv://${process.env.username}:${process.env.password}@cluster0.6jvdn.mongodb.net/shop?retryWrites=true&w=majority`,{
                 useNewUrlParser: true,
         });
     
